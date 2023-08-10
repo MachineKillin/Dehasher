@@ -1,0 +1,16 @@
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\ViperDehasher.exe.config
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\ViperDehasher.exe
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\ViperDehasher.pdb
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.csproj.AssemblyReference.cache
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.csproj.SuggestedBindingRedirects.cache
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.mainform.resources
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.Properties.Resources.resources
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.csproj.GenerateResource.cache
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.csproj.CoreCompileInputs.cache
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.exe
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.pdb
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Leaf.xNet.dll
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Leaf.xNet.xml
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.csproj.CopyComplete
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Newtonsoft.Json.xml
