@@ -17,4 +17,4 @@ A fast dehasher using 5 sources and supports 7 different hash types.
   - SHA512
 
 ## Pictures
-![](https://github.com/MachineKillin/Dehasher/assets/56980137/8fea2645-eb2c-473f-bca0-02db977c7810)
+![](https://media.discordapp.net/attachments/989719796008488992/1139034513528336434/image.png?width=738&height=630)
