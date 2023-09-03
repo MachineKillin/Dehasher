@@ -271,7 +271,7 @@ namespace ViperDehasher
                         }
                         catch { }
                     }
-                    if (!found)
+                    /*if (!found)
                     {
                         try
                         {
@@ -290,7 +290,7 @@ namespace ViperDehasher
                             }
                         }
                         catch { }
-                    }
+                    }*/
                 }
                 progress++;
                 if (found) { yes++; }
