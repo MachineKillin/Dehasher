@@ -15,6 +15,8 @@ A fast dehasher using 5 sources and supports 7 different hash types.
   - SHA256
   - SHA384
   - SHA512
+  - MYSQL5
+  - MYSQL3
 
 ## Pictures
-![](https://media.discordapp.net/attachments/989719796008488992/1139034513528336434/image.png?width=738&height=630)
+![]([https://media.discordapp.net/attachments/989719796008488992/1139034513528336434/image.png?width=738&height=630](https://media.discordapp.net/attachments/883003553726214195/1158587305108459542/image.png?ex=651cca03&is=651b7883&hm=888f39c6028a33d8acbe68de60c0ae1d15ab42dc7f73bcc8981b626b7ae88a2d&=&width=754&height=671)https://media.discordapp.net/attachments/883003553726214195/1158587305108459542/image.png?ex=651cca03&is=651b7883&hm=888f39c6028a33d8acbe68de60c0ae1d15ab42dc7f73bcc8981b626b7ae88a2d&=&width=754&height=671)
