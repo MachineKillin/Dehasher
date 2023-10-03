@@ -7,7 +7,7 @@ A fast dehasher using 5 sources and supports 7 different hash types.
 ## Features
 - 5 different sources of databases to pull from.
 - multithreaded support, up to 1000 threads.
-- 7 different hashtypes:
+- 9 different hashtypes:
   - MD5
   - Double MD5
   - SHA1
