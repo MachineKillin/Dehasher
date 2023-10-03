@@ -31,6 +31,8 @@ namespace ViperDehasher
         int SHA256;
         int SHA384;
         int SHA512;
+        int MYSQL5;
+        int MYSQL3;
         public mainform()
         {
             InitializeComponent();
@@ -80,6 +82,8 @@ namespace ViperDehasher
                 listBox1.Items[7] = "SHA256: " + SHA256.ToString();
                 listBox1.Items[8] = "SHA384: " + SHA384.ToString();
                 listBox1.Items[9] = "SHA512: " + SHA512.ToString();
+                listBox1.Items[10] = "MYSQL5: " + MYSQL5.ToString();
+                listBox1.Items[11] = "MYSQL3: " + MYSQL3.ToString();
             });
         }
 
@@ -94,6 +98,8 @@ namespace ViperDehasher
             SHA256 = 0;
             SHA384 = 0;
             SHA512 = 0;
+            MYSQL5 = 0;
+            MYSQL3 = 0;
             startbttn.Text = "Running";
             startbttn.Enabled = false;
             textBox1.Enabled = false;
@@ -131,49 +137,61 @@ namespace ViperDehasher
             if (type == "md5")
             {
                 MD5++;
-                Export("md5.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("md5.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else if (type == "double_md5")
             {
                 DMD5++;
-                Export("double_md5.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("double_md5.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else if (type == "sha1")
             {
                 SHA1++;
-                Export("sha1.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("sha1.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else if (type == "sha3")
             {
                 SHA3++;
-                Export("sha3.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("sha3.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else if (type == "sha256")
             {
                 SHA256++;
-                Export("sha256.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("sha256.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else if (type == "sha384")
             {
                 SHA384++;
-                Export("sha384.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("sha384.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else if (type == "sha512")
             {
                 SHA512++;
-                Export("sha512.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("sha512.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
+            }
+            else if (type == "mysql5")
+            {
+                MYSQL5++;
+                Export("mysql5.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
+            }
+            else if (type == "mysql3")
+            {
+                MYSQL3++;
+                Export("mysql3.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
             else
             {
-                Export("unknowntype.txt", item + ":" + dehashed + Environment.NewLine);
-                Export("all.txt", item + ":" + dehashed + Environment.NewLine);
+                Export("unknowntype.txt", item + ":" + dehashed);
+                Export("all.txt", item + ":" + dehashed);
             }
         }
 
@@ -203,6 +221,38 @@ namespace ViperDehasher
             }
         }
 
+        private static (string, string) BlueCode(string hash)
+        {
+            List<(Regex, string)> identify = new List<(Regex, string)>
+            {
+                (new Regex(@"^[a-fA-F0-9]{32}$"), "md5"),
+                (new Regex(@"^[a-fA-F0-9]{40}$"), "sha1"),
+                (new Regex(@"^\*[a-fA-F0-9]{40}$"), "mysql5"),
+                (new Regex(@"^[a-fA-F0-9]{16}$"), "mysql3"),
+                (new Regex(@"^[a-fA-F0-9]{64}$"), "sha256"),
+                (new Regex(@"^[a-fA-F0-9]{128}$"), "sha512")
+            };
+            string type = "";
+            foreach ((Regex ex, string t) in identify)
+            {
+                if (ex.IsMatch(hash)) { type = t; }
+            }
+            if (!string.IsNullOrEmpty(type))
+            {
+                try
+                {
+                    HttpRequest request = new HttpRequest();
+                    request.IgnoreProtocolErrors = true;
+                    request.UserAgent = "MD5 LITE 2.4.5";
+                    string req = request.Get("http://lite.bluecode.info/?search%5B%5D=" + hash).ToString();
+                    Match match = Regex.Match(req, @"(?<="":"").+?(?=""})");
+                    return (type, match.Groups[0].Value);
+                }
+                catch { }
+            }
+            return ("", "");
+        }
+
         private void Dehash(string line)
         {
             try
@@ -218,6 +268,15 @@ namespace ViperDehasher
                     {
                         SortSave(output.Item1.ToLower(), output.Item2, item);
                         found = true;
+                    }
+                    if (!found)
+                    {
+                        (string type, string dehashed) = BlueCode(hash);
+                        if (!string.IsNullOrEmpty(dehashed))
+                        {
+                            SortSave(type, dehashed, item);
+                            found = true;
+                        }
                     }
                     if (!found & hash.Length == 16)
                     {

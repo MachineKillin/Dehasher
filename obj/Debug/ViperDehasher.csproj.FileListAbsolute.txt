@@ -14,3 +14,16 @@ C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Leaf.xNet.xml
 C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\obj\Debug\ViperDehasher.csproj.CopyComplete
 C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Killin\source\repos\ViperDehasher\ViperDehasher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jyove\source\repos\Dehasher\bin\Debug\ViperDehasher.exe.config
+C:\Users\jyove\source\repos\Dehasher\bin\Debug\ViperDehasher.exe
+C:\Users\jyove\source\repos\Dehasher\bin\Debug\ViperDehasher.pdb
+C:\Users\jyove\source\repos\Dehasher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jyove\source\repos\Dehasher\bin\Debug\Leaf.xNet.xml
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.csproj.AssemblyReference.cache
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.mainform.resources
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.Properties.Resources.resources
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.csproj.GenerateResource.cache
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.csproj.CoreCompileInputs.cache
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.csproj.CopyComplete
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.exe
+C:\Users\jyove\source\repos\Dehasher\obj\Debug\ViperDehasher.pdb
