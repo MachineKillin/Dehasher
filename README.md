@@ -1,7 +1,7 @@
 # Viper Dehasher
 A fast dehasher using 5 sources and supports 7 different hash types.
 ### [exe download](https://github.com/MachineKillin/Dehasher/releases/download/v1/ViperDehasher.exe)
-### [avine discord](https://discord.gg/PCYTj7MFSE)
+### [avine discord](https://discord.gg/avine)
 ### [github discord](https://discord.com/invite/JcAvQc797r)
 
 ## Features
